@@ -16,7 +16,7 @@ yerləşir*/
 .labelText {
     /*Borderlərin üzərində olan Day, Moth, Year yazılarının dizaynı*/
     font-family: 'Poppins';
-    font-weight: 400;
+    font-weight: 700;
     font-size: 14px;
     color: var(--border-and-label-color);
     font-style: bold;
@@ -72,7 +72,7 @@ yerləşir*/
     background-color: var(--white);
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border-radius: 12px 12px 36px 12px;
     padding: 10px 16px;
 }
@@ -80,18 +80,53 @@ yerləşir*/
 .ageForm {
     width: 100%;
     display: flex;
+    flex-direction: column;
+}
+
+.inputsRow {
+    display: flex;
     flex-direction: row;
+}
+
+.submitButton {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 64px 0;
+}
+
+.submitLine {
+    width: 100%;
+    border: none;
+    border-top: 1px solid var(--border-and-label-color);
+}
+
+.submitBtn {
+    position: absolute;
+    background-color: var(--button-and-number-color);
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 42%;
+
 }
 
 .inputGroup {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 4px;
     padding: 12px;
 }
 
 .inputGroup input {
-    border: 2px solid var(--border-and-label-color);
+    border: 1px solid var(--border-and-label-color);
     border-radius: 8px;
     padding: 8px 12px;
     width: 88px;
