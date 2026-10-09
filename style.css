@@ -61,10 +61,11 @@ yerləşir*/
 .container {
     background-color: var(--bg-color);
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5% 10%;
+    padding: 18px 24px;
 }
 
 .mainCard {
@@ -72,4 +73,31 @@ yerləşir*/
     width: 100%;
     display: flex;
     flex-direction: row;
+    border-radius: 12px 12px 36px 12px;
+    padding: 10px 16px;
+}
+
+.ageForm {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+}
+
+.inputGroup input {
+    border: 2px solid var(--border-and-label-color);
+    border-radius: 8px;
+    padding: 8px 12px;
+    width: 88px;
+    height: 56px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--black);
 }
