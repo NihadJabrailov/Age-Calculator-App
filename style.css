@@ -1,0 +1,75 @@
+/*buradan xəttlənən hissəyə qədər ümumi istifadə olunacaq dizayn kodları
+yerləşir*/
+
+:root {
+    /*root-un içində istifadə edəcəyim bütün rənglər var. lazım olduqda
+    sadəcə burada dəyişiklik edə biləcəm.*/
+    --bg-color: hsl(0, 0%, 86%);
+    --white: hsl(0, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --button-and-number-color: hsl(259, 100%, 65%);
+    --error-color: hsl(0, 100%, 67%);
+    --border-and-label-color: hsl(0, 1%, 44%);
+}
+
+
+.labelText {
+    /*Borderlərin üzərində olan Day, Moth, Year yazılarının dizaynı*/
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--border-and-label-color);
+    font-style: bold;
+}
+
+.h1NumberText {
+    /*İl hesablandıqdan sonra ortaya çıxan rəqəmlərin dizaynı*/
+    font-family: 'Poppins';
+    font-weight: 800;
+    font-size: 64px;
+    color: var(--button-and-number-color);
+    font-style: italic;
+}
+
+.h1DateText {
+    /* h1 rəqəmlərinin yanında gələcək year, moth, day yazılarının dizaynı*/
+    font-family: 'Poppins';
+    font-weight: 800;
+    font-size: 64px;
+    color: var(--black);
+    font-style: italic;
+}
+
+.pharagraphText {
+    /*Border içində olacaq rəqəmlərin dizaynı*/
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--black);
+    font-style: bold;
+}
+
+
+
+* {
+    /* ümumi reset kodu*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: var(--bg-color);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 10%;
+}
+
+.mainCard {
+    background-color: var(--white);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}

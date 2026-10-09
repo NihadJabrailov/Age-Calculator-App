@@ -21,7 +21,7 @@ The designs were created to the following widths:
 - White: hsl(0, 100%, 100%)
 - Grey 100: hsl(0, 0%, 94%)
 - Grey 200: hsl(0, 0%, 86%)
-- Grey 500: hsl(0, 1%, 44%)
+- Grey 500:     
 - Black: hsl(0, 0%, 0%)
 
 ## Typography
