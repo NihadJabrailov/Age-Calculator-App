@@ -22,27 +22,41 @@
                     <div class="inputGroup">
                         <label for="day" class="labelText">DAY</label>
                         <input type="number" name="day" id="day">
+                        <span class="errorText" id="errorTextDay1">This field is required</span>
+                        <span class="errorText" id="errorTextDay2">Must be a valid date</span>
+                        <span class="errorText" id="errorTextDay3">Must be a valid day</span>
                     </div>
 
                     <div class="inputGroup">
                         <label for="month" class="labelText">MONTH</label>
                         <input type="number" name="month" id="month">
+                        <span class="errorText" id="errorTextMonth1">This field is required</span>
+                        <span class="errorText" id="errorTextMonth2">Must be a valid month</span>
                     </div>
 
                     <div class="inputGroup">
                         <label for="year" class="labelText">YEAR</label>
                         <input type="number" name="year" id="year">
+                        <span class="errorText" id="errorTextYear1">This field is required</span>
+                        <span class="errorText" id="errorTextYear2">Must be in the past</span>
                     </div>
                 </div>
 
                 <div class="submitButton">
                     <hr class="submitLine">
-                    <button class="submitBtn" type="submit">
+                    <button id="submitBtn" class="submitBtn" type="submit">
                         <img src="./images/icon-arrow.svg" alt="SubmitButtonImage">
                     </button>
                 </div>
 
             </form>
+
+            <div class="resultContainer">
+                <h1 class="h1NumberText" id="yearsResult">-- <span class="h1DateText">years</span>
+                </h1>
+                <h1 class="h1NumberText" id="monthsResult">-- <span class="h1DateText">months</span></h1>
+                <h1 class="h1NumberText" id="daysResult">-- <span class="h1DateText">days</span></h1>
+            </div>
         </div>
     </div>
 
