@@ -4,22 +4,23 @@ yerləşir*/
 :root {
     /*root-un içində istifadə edəcəyim bütün rənglər var. lazım olduqda
     sadəcə burada dəyişiklik edə biləcəm.*/
-    --bg-color: hsl(0, 0%, 86%);
+    --bg-color: hsl(0, 0%, 94%);
     --white: hsl(0, 100%, 100%);
-    --black: hsl(0, 0%, 0%);
+    --black: hsl(0, 0%, 8%);
     --button-and-number-color: hsl(259, 100%, 65%);
     --error-color: hsl(0, 100%, 67%);
     --border-and-label-color: hsl(0, 1%, 44%);
+    --line-and-border-color: hsl(0, 0%, 86%);
 }
 
 
 .labelText {
-    /*Borderlərin üzərində olan Day, Moth, Year yazılarının dizaynı*/
+    /*Borderlərin üzərində olan Day, Month, Year yazılarının dizaynı*/
     font-family: 'Poppins';
     font-weight: 700;
     font-size: 14px;
+    letter-spacing: 3px;
     color: var(--border-and-label-color);
-    font-style: bold;
 }
 
 .h1NumberText,
@@ -119,13 +120,13 @@ yerləşir*/
     display: flex;
     align-items: center;
     position: relative;
-    margin: 64px 0;
+    margin: 40px 0;
 }
 
 .submitLine {
     width: 100%;
     border: none;
-    border-top: 1px solid var(--border-and-label-color);
+    border-top: 1px solid var(--line-and-border-color);
 }
 
 .submitBtn {
@@ -133,33 +134,112 @@ yerləşir*/
     background-color: var(--button-and-number-color);
     border: none;
     border-radius: 50%;
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateY(-50%);
     top: 50%;
-    left: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.2s ease;
+}
 
+.submitBtn:hover {
+    background-color: var(--black);
+}
+
+.submitBtn img {
+    width: 24px;
+    height: 24px;
 }
 
 .inputGroup {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    padding: 12px;
+    gap: 8px;
+    padding: 0;
 }
 
 .inputGroup input {
-    border: 1px solid var(--border-and-label-color);
+    border: 1px solid var(--line-and-border-color);
     border-radius: 8px;
-    padding: 8px 12px;
+    padding: 12px 16px;
     width: 88px;
     height: 56px;
     font-family: 'Poppins';
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
     color: var(--black);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.inputGroup input:focus {
+    border-color: var(--button-and-number-color);
+}
+
+.inputGroup input::placeholder {
+    color: var(--border-and-label-color);
+    opacity: 0.5;
+}
+
+/* Chrome, Safari, Edge, Opera number arrows gizlətmək */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+@media (min-width: 768px) {
+    .mainCard {
+        max-width: 840px;
+        width: 100%;
+        padding: 56px;
+        border-radius: 24px 24px 200px 24px;
+    }
+
+    .inputsRow {
+        gap: 32px;
+    }
+
+    .inputGroup input {
+        width: 160px;
+        height: 72px;
+        font-size: 32px;
+        padding: 12px 24px;
+    }
+
+    .submitButton {
+        margin: 40px 0;
+    }
+
+    .submitLine {
+        width: 100%;
+    }
+
+    .submitBtn {
+        left: auto;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 96px;
+        height: 96px;
+    }
+
+    .submitBtn img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .h1NumberText,
+    .h1DateText {
+        font-size: 104px;
+        line-height: 110%;
+        letter-spacing: -2px;
+    }
 }
