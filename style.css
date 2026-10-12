@@ -16,14 +16,15 @@ yerləşir*/
 .labelText {
     /*Borderlərin üzərində olan Day, Moth, Year yazılarının dizaynı*/
     font-family: 'Poppins';
-    font-weight: 400;
+    font-weight: 700;
     font-size: 14px;
     color: var(--border-and-label-color);
     font-style: bold;
 }
 
-.h1NumberText {
-    /*İl hesablandıqdan sonra ortaya çıxan rəqəmlərin dizaynı*/
+.h1NumberText,
+.h1DateText {
+    /*İl hesablandıqdan sonra ortaya çıxan rəqəmlərin və yazıların ortaq dizaynı*/
     font-family: 'Poppins';
     font-weight: 800;
     font-size: 64px;
@@ -32,12 +33,8 @@ yerləşir*/
 }
 
 .h1DateText {
-    /* h1 rəqəmlərinin yanında gələcək year, moth, day yazılarının dizaynı*/
-    font-family: 'Poppins';
-    font-weight: 800;
-    font-size: 64px;
+    /* h1 rəqəmlərinin yanında gələcək year, moth, day yazılarının fərqli  dizaynı*/
     color: var(--black);
-    font-style: italic;
 }
 
 .pharagraphText {
@@ -47,6 +44,36 @@ yerləşir*/
     font-size: 24px;
     color: var(--black);
     font-style: bold;
+}
+
+.errorText {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--error-color);
+}
+
+/*Xəta mesajlarının dizaynı*/
+#errorTextDay1,
+#errorTextDay2,
+#errorTextDay3,
+#errorTextMonth1,
+#errorTextMonth2,
+#errorTextYear1,
+#errorTextYear2 {
+    display: none;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--error-color);
+}
+
+.inputGroup input.error {
+    border-color: var(--error-color);
+}
+
+.inputGroup.error .labelText {
+    color: var(--error-color);
 }
 
 
@@ -61,15 +88,78 @@ yerləşir*/
 .container {
     background-color: var(--bg-color);
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5% 10%;
+    padding: 18px 24px;
 }
 
 .mainCard {
     background-color: var(--white);
     width: 100%;
     display: flex;
+    flex-direction: column;
+    border-radius: 24px 24px 96px 24px;
+    padding: 10px 16px;
+}
+
+.ageForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputsRow {
+    display: flex;
     flex-direction: row;
+}
+
+.submitButton {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 64px 0;
+}
+
+.submitLine {
+    width: 100%;
+    border: none;
+    border-top: 1px solid var(--border-and-label-color);
+}
+
+.submitBtn {
+    position: absolute;
+    background-color: var(--button-and-number-color);
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 42%;
+
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+}
+
+.inputGroup input {
+    border: 1px solid var(--border-and-label-color);
+    border-radius: 8px;
+    padding: 8px 12px;
+    width: 88px;
+    height: 56px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--black);
 }
